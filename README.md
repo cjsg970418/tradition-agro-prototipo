@@ -1,12 +1,38 @@
-# Tradition Agro — Prototipo (GitHub Pages)
+# Tradition Agro Colombia
 
-Este repositorio contiene un prototipo estático para publicar en **GitHub Pages**.
+Proyecto demostrativo basado en Next.js 14 + TypeScript para publicar estadísticas y precios del sector agro colombiano.
 
-## Instrucciones de despliegue
-1. Sube **index.html**, la carpeta **assets/** y el archivo **.nojekyll** a tu repositorio.
-2. Ve a **Settings → Pages**.
-3. En **Source**, selecciona `Deploy from a branch`.
-4. Selecciona la rama `main` y la carpeta `/ (root)`.
-5. Guarda y espera a que GitHub Pages genere el enlace.
+## Requisitos
+- Node.js 18+
+- PostgreSQL
 
-El archivo `.nojekyll` es obligatorio para evitar conflictos con la carpeta **assets/**.
+## Instalación
+```bash
+yarn install
+```
+
+### Variables de entorno
+Cree un archivo `.env` con las variables:
+```
+DATABASE_URL=postgres://user:pass@localhost:5432/agro
+NEXTAUTH_SECRET=changeme
+```
+
+### Migraciones y seed
+```bash
+yarn prisma migrate dev
+yarn db:seed
+```
+
+## Desarrollo
+```bash
+yarn dev
+```
+
+## Estructura
+- `src/app` - Rutas de la aplicación.
+- `prisma/schema.prisma` - Modelo de datos.
+- `prisma/seed.ts` - Datos dummy.
+
+## Créditos
+Datos de ejemplo sin valor comercial.
