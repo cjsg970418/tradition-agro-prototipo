@@ -8,7 +8,7 @@ Proyecto demostrativo basado en Next.js 14 + TypeScript para publicar estadísti
 
 ## Instalación
 ```bash
-yarn install
+npm install
 ```
 
 ### Variables de entorno
@@ -20,14 +20,18 @@ NEXTAUTH_SECRET=changeme
 
 ### Migraciones y seed
 ```bash
-yarn prisma migrate dev
-yarn db:seed
+npm run prisma:migrate
+npm run db:seed
 ```
 
 ## Desarrollo
 ```bash
-yarn dev
+npm run dev
 ```
+
+### Vista previa rápida
+
+Para visualizar el contenido sin compilar la aplicación, se incluye un `index.html` estático en la raíz del proyecto. Ábralo en un navegador para ver una muestra del portal.
 
 ## Estructura
 - `src/app` - Rutas de la aplicación.
